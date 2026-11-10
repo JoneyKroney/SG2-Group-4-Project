@@ -126,7 +126,7 @@ pattern = [
 print("This program locates two patterns (a 13 by 13 cross in a box) within a 250 by 250 black and white PNG, validates that both sit on the same horizontal row, then shifts the image so the left most marker lands in the top-left corner. Finally, it displays the original, the shifted result, and prints pixel statistics for the orignal image.")
  
 while(dontEndProgram):
-    filename = input("Enter the name of the text file: ")
+    filename = input("Enter the name of the image file: ")
     
     if(IsFileValid(filename) == False):
         continue
@@ -140,7 +140,7 @@ while(dontEndProgram):
 # Then .astype(int) convets true and false to 0 and 1
     zerosAndOnes = (pixels != 0).astype(int)
     
-    imageHeight, imageWidth = orignalImage.size
+    imageWidth, imageHeight = orignalImage.size
     patternHeight = len(pattern)
     patterWidth = len(pattern[0]) if patternHeight else 0
     matches = []

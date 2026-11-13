@@ -103,6 +103,19 @@ def ShiftUpLeft(arrayToShift, x, y):
 
 
 
+# Open and create some file to test
+open("empty.png", "wb").close()
+with open("invalid.png", "wb") as file:
+    file.write(b"This is not a real PNG image")
+
+# ----------------------------------- Create a white 250x250 image -----------------------------------
+from PIL import Image
+
+image = Image.new("L", (250, 250), 255)
+
+image.save("zero.png")
+
+print("zero.png created successfully")
 
 # ----------------------------------- START OF PROGRAM -----------------------------------
 dontEndProgram = True

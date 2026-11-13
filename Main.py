@@ -176,7 +176,7 @@ while(dontEndProgram):
 
     
 # this turns the image into an array of pixles so all the math functions we need to do is built in 
-    pixels = list(orignalImage.get_flattened_data())
+    pixels = orignalImage.get_flattened_data()
     
     minAlpha = min(pixels)
     maxAlpha = max(pixels)

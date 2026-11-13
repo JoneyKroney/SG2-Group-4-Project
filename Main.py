@@ -174,9 +174,14 @@ while(dontEndProgram):
     ArrayToImage(shifted).show()
         
     input("Press Enter to continue...")
+
+    testResult = ShiftUpLeft(zerosAndOnes, 0, 0)
+
+    print("No movement test:",
+          np.array_equal(testResult, zerosAndOnes))
     
 # this turns the image into an array of pixles so all the math functions we need to do is built in 
-    pixels = list(orignalImage.getdata())
+    pixels = list(orignalImage.get_flattened_data())
     
     minAlpha = min(pixels)
     maxAlpha = max(pixels)

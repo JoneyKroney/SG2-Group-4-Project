@@ -184,7 +184,7 @@ while(dontEndProgram):
     blackCount  = sum(1 for p in pixels if p == 0)
     whiteCount  = sum(1 for p in pixels if p == 255)
     
-    avgAlpha = (whiteCount * 255) / (imageHeight * imageWidth) 
+    avgAlpha = sum(pixels) / len(pixels)
     
     print(f"Size:                {imageWidth} x {imageHeight}")
     print(f"Pixel Alpha range:   {minAlpha} - {maxAlpha}")

@@ -103,20 +103,6 @@ def ShiftUpLeft(arrayToShift, x, y):
 
 
 
-# Open and create some file to test
-open("empty.png", "wb").close()
-with open("invalid.png", "wb") as file:
-    file.write(b"This is not a real PNG image")
-
-# ----------------------------------- Create a white 250x250 image -----------------------------------
-from PIL import Image
-
-image = Image.new("L", (250, 250), 255)
-
-image.save("zero.png")
-
-print("zero.png created successfully")
-
 # ----------------------------------- START OF PROGRAM -----------------------------------
 dontEndProgram = True
 
@@ -188,11 +174,6 @@ while(dontEndProgram):
         
     input("Press Enter to continue...")
 
-# After press enter, image remains unchanged and print No movement test: true/false
-    testResult = ShiftUpLeft(zerosAndOnes, 0, 0)
-
-    print("No movement test:",
-          np.array_equal(testResult, zerosAndOnes))
     
 # this turns the image into an array of pixles so all the math functions we need to do is built in 
     pixels = list(orignalImage.get_flattened_data())

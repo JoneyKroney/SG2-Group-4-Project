@@ -175,6 +175,7 @@ while(dontEndProgram):
         
     input("Press Enter to continue...")
 
+# After press enter, image remains unchanged and print No movement test: true/false
     testResult = ShiftUpLeft(zerosAndOnes, 0, 0)
 
     print("No movement test:",
